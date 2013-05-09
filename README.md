@@ -15,12 +15,12 @@
 
         mount Lockup::Engine, at: '/lockup'
 
-If you're using Figaro, set your lockup password like so:
+## Usage
+
+To set a password, define LOCKUP_CODEWORD in your environments/your_environment.rb file like so:
+
+    ENV["LOCKUP_CODEWORD"] = 'secret'
+
+If you're using Figaro, set your lockup password in your applicaiton.yml file:
 
     LOCKUP_CODEWORD: "love"
-
-## Contributing
-
-1. Fork it
-2. Improve it
-3. Request a Pull
