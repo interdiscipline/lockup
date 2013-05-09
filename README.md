@@ -6,15 +6,14 @@
 
 ## Installation
 
-Add this line to your application's Gemfile:
+1. Clone the repo to a local folder
+2. Add this line to your application's Gemfile:
 
-    gem 'lockup'
+    gem 'lockup', path: 'your/path/to/lockup'
 
-And then execute:
+3. Finally, add this line to your routes.rb:
 
-    $ bundle
-
-## Usage
+  mount Lockup::Engine, at: '/lockup'
 
 If you're using Figaro, set your lockup password like so:
 
