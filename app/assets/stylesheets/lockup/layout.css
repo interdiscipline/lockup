@@ -1,0 +1,91 @@
+body {
+  padding: 15%;
+  font-family: Helvetica, sans-serif;
+  color: #fff;
+  background-color: #252525;
+}
+h1 {
+  font-family: Helvetica, sans-serif;
+  font-size: 60px;
+  text-align: center;
+}
+form input[type='password'] {
+  display: block;
+  margin: 0 auto;
+  padding: 16px;
+  width: 200px;
+  color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-size: 30px;
+  text-align: center;
+  background-color: #535353;
+  border: 1px solid #ccc;
+  -webkit-appearance: none;
+  outline: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+form input[type='password']:hover {
+  border-color: #ffcc33;
+}
+form input[type='password']:focus {
+  border-color: #266cec;
+}
+form input[type='password'].nope {
+  border-color: #d01a45;
+  background-color: #6c3137;
+}
+form button {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 16px 6px 16px;
+  width: 232px;
+  color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-size: 30px;
+  text-align: center;
+  background-color: #1ad056;
+  border: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  outline: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+form button:hover,
+form button:focus {
+  background-color: #26ec67;
+}
+form button:active {
+  background-color: #266cec;
+  -webkit-transition: all 0 ease-in-out;
+  -moz-transition: all 0 ease-in-out;
+  -ms-transition: all 0 ease-in-out;
+  -o-transition: all 0 ease-in-out;
+  transition: all 0 ease-in-out;
+}
+form p {
+  margin-bottom: 32px
+}
+
+.hmm h3 {
+  display: block;
+  margin: 0 auto;
+  padding: 6px;
+  width: 400px;
+  color: #d01a45;
+  text-align: center;
+  background-color: #4a1f23;
+}

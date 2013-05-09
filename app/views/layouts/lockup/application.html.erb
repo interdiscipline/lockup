@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Lockup</title>
-  <%= stylesheet_link_tag    "lockup/application", :media => "all" %>
-  <%= javascript_include_tag "lockup/application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Please enter the code word to continue…</title>
+    <script type="text/javascript" src="//use.typekit.net/iql6vck.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <%= stylesheet_link_tag    "lockup/application", :media => "all" %>
+    <%= javascript_include_tag "lockup/application" %>
+  </head>
 
-<%= yield %>
-
-</body>
+  <body>
+    <%= yield %>
+  </body>
 </html>
