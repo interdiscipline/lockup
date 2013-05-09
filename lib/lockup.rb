@@ -16,7 +16,6 @@ module Lockup
         end
       end
     end
-
   end
   module ClassMethods
   end
