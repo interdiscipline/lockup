@@ -22,7 +22,7 @@ To set a codeword, define LOCKUP_CODEWORD in your environments/your_environment.
 
     ENV["LOCKUP_CODEWORD"] = 'secret'
 
-If you're using Figaro, set your lockup codeword in your application.yml file:
+If you're using [Figaro](https://github.com/laserlemon/figaro), set your lockup codeword in your application.yml file:
 
     LOCKUP_CODEWORD: "love"
     
