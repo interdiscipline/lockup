@@ -24,3 +24,9 @@ To set a password, define LOCKUP_CODEWORD in your environments/your_environment.
 If you're using Figaro, set your lockup password in your application.yml file:
 
     LOCKUP_CODEWORD: "love"
+
+### Link it with no typing:
+
+    http://somedomain.com/or_path/?lockup_codeword=love
+    
+The visitor is redirected and the cookie is set without them ever seeing the Lockup splash page.
