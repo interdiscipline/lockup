@@ -21,6 +21,6 @@ To set a password, define LOCKUP_CODEWORD in your environments/your_environment.
 
     ENV["LOCKUP_CODEWORD"] = 'secret'
 
-If you're using Figaro, set your lockup password in your applicaiton.yml file:
+If you're using Figaro, set your lockup password in your application.yml file:
 
     LOCKUP_CODEWORD: "love"
