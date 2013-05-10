@@ -1,8 +1,8 @@
 # Lockup
 
-"Can I come into your fort?"
+“Can I come into your fort?”
 
-"...what's the password?"
+“…what's the codeword?”
 
 ## Installation
 
@@ -17,13 +17,15 @@
 
 ## Usage
 
-To set a password, define LOCKUP_CODEWORD in your environments/your_environment.rb file like so:
+To set a codeword, define LOCKUP_CODEWORD in your environments/your_environment.rb file like so:
 
     ENV["LOCKUP_CODEWORD"] = 'secret'
 
-If you're using Figaro, set your lockup password in your application.yml file:
+If you're using Figaro, set your lockup codeword in your application.yml file:
 
     LOCKUP_CODEWORD: "love"
+    
+**Codewords are not case-sensitive, by design. Keep it simple.**
 
 ### Link it with no typing:
 
