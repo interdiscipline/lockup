@@ -7,11 +7,11 @@ require "lockup/version"
 Gem::Specification.new do |s|
   s.name        = "lockup"
   s.version     = Lockup::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Lockup."
-  s.description = "TODO: Description of Lockup."
+  s.authors     = ["gb Studio"]
+  s.email       = ["hello@grantblakeman.com"]
+  s.homepage    = "http://lockupgem.com"
+  s.summary     = "Lock staging servers from search engines and prying eyes."
+  s.description = "A simple gem to more elegantly place a staging server or other in-progress application behind a basic codeword. Easy to implement, share with clients/collaborators, and more beautiful than the typical password-protection sheet."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
