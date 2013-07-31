@@ -6,7 +6,7 @@ module Lockup
       ActiveSupport.on_load(:action_controller) do
         include Lockup::InstanceMethods
         extend Lockup::ClassMethods
-        before_filter :check_for_lockup
+        before_filter :check_for_lockup, :except => ["unlock"]
       end
     end
   end

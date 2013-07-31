@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :lockup
+  
   mount Lockup::Engine, at: '/lockup'
 end
 
