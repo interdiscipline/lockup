@@ -10,13 +10,13 @@
 
         gem 'lockup'
 
-2*. Next, add this line to your routes.rb:
+2. Next, add this line to your routes.rb:**
 
         mount Lockup::Engine, at: '/lockup'
         
 3. Define a codeword (see Usage below).
 
-*This step may be unnecessary—depends on your config/routes.rb setup.
+**This step may be unnecessary—depends on your config/routes.rb setup.
 
 ## Usage
 
