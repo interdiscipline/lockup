@@ -3,7 +3,9 @@
   <head>
     <meta name="robots" content="noindex, nofollow" />
     <title>Please enter the code word to continue…</title>
-    <%= stylesheet_link_tag    "lockup/application", :media => "all" %>
+    <style>
+      <%= render partial: 'layouts/lockup/inline_css' %>
+    </style>
   </head>
 
   <body>
