@@ -14,7 +14,7 @@
 
         mount Lockup::Engine, at: '/lockup'
 
-**This step may be unnecessary—depends on your config/routes.rb setup.
+  **This step may be unnecessary—depends on your config/routes.rb setup.
         
 3. Define a codeword (see Usage below).
 
