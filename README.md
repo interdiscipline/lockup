@@ -9,14 +9,14 @@
 1. Add this line to your application's Gemfile:
 
         gem 'lockup'
+        
+2. Define a codeword (see Usage below).
 
-2. Next, add this line to your routes.rb:**
+3. That's it!**
+
+  **If you're passing parameters right at your root (i.e. somedomain.com/:parameter), you'll want to place this mount statement in your routes.rb file, _before_ your other route statements:
 
         mount Lockup::Engine, at: '/lockup'
-
-  **This step may be unnecessary—depends on your config/routes.rb setup.
-        
-3. Define a codeword (see Usage below).
 
 ## Usage
 
