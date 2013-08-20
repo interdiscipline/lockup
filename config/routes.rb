@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 end
 
 Lockup::Engine.routes.draw do
-  match 'unlock' => 'lockup#unlock'
+  get   'unlock' => 'lockup#unlock'
+  post  'unlock' => 'lockup#unlock'
 end
