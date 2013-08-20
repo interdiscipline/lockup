@@ -1,8 +1,12 @@
 # Lockup
 
-“Can I come into your fort?”
+[![Gem Version](https://badge.fury.io/rb/lockup.png)](http://badge.fury.io/rb/lockup)
 
-“…what's the codeword?”
+A simple gem to more elegantly place a staging server or other in-progress application behind a basic codeword. It’s easy to implement, share with clients/collaborators, and more beautiful than the typical password-protection sheet.
+
+_“Can I come into your fort?”_
+
+_“…what's the codeword?”_
 
 ## Installation
 
