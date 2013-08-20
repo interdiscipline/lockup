@@ -42,4 +42,4 @@ If you're using [Figaro](https://github.com/laserlemon/figaro), set your lockup 
     
 The visitor is redirected and the cookie is set without them ever seeing the Lockup splash page.
 
-(Lockup also makes a rudimentary attempt to block major search engine bots/crawlers from following this link and indexing the site, just in case it ever gets out into the wild.)
+(Lockup also makes a rudimentary attempt based on user agent to block major search engine bots/crawlers from following this link and indexing the site, just in case it ever gets out into the wild.)
