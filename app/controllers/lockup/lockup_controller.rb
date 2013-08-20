@@ -4,7 +4,8 @@ module Lockup
     
     def unlock
       if params[:lockup_codeword].present?
-        unless request.env['HTTP_USER_AGENT'].match(/crawl|Googlebot|Slurp|spider|Bingbot|tracker|click|parser|spider/)
+        user_agent = request.env['HTTP_USER_AGENT'].downcase
+        unless user_agent.match(/crawl|googlebot|slurp|spider|bingbot|tracker|click|parser|spider/)
           @codeword = params[:lockup_codeword].to_s.downcase
           @return_to = params[:return_to]
           if @codeword == ENV["LOCKUP_CODEWORD"].to_s.downcase
