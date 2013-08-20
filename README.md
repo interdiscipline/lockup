@@ -41,3 +41,5 @@ If you're using [Figaro](https://github.com/laserlemon/figaro), set your lockup 
     http://somedomain.com/or_path/?lockup_codeword=love
     
 The visitor is redirected and the cookie is set without them ever seeing the Lockup splash page.
+
+(Lockup also makes a rudimentary attempt to block major search engine bots/crawlers from following this link and indexing the site, just in case it ever gets out into the wild.)
