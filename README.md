@@ -1,3 +1,5 @@
+<img src="http://grantblakeman.com/lockup/lockup_mark.png" width="100" height="134" alt="Lockup Shield" />
+
 # Lockup
 
 [![Gem Version](https://badge.fury.io/rb/lockup.png)](http://badge.fury.io/rb/lockup)
