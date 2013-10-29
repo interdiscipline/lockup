@@ -34,7 +34,7 @@ To set a codeword, define LOCKUP_CODEWORD in your environments/your_environment.
 
 If you think you might need a hint:
 
-    ENV["LOCKUP_CODEWORD"] = 'hint'
+    ENV["LOCKUP_HINT"] = 'hint'
 
 If you're using [Figaro](https://github.com/laserlemon/figaro), set your lockup codeword and hint (optional) in your application.yml file:
 
