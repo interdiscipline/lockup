@@ -32,9 +32,15 @@ To set a codeword, define LOCKUP_CODEWORD in your environments/your_environment.
 
     ENV["LOCKUP_CODEWORD"] = 'secret'
 
-If you're using [Figaro](https://github.com/laserlemon/figaro), set your lockup codeword in your application.yml file:
+If you think you might need a hint:
+
+    ENV["LOCKUP_CODEWORD"] = 'hint'
+
+If you're using [Figaro](https://github.com/laserlemon/figaro), set your lockup codeword and hint (optional) in your application.yml file:
 
     LOCKUP_CODEWORD: "love"
+    
+    LOCKUP_HINT: "Pepé Le Pew"
     
 **Codewords are not case-sensitive, by design. Keep it simple.**
 
