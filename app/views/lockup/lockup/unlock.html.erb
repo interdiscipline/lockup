@@ -15,7 +15,7 @@
     
   <% if ENV["LOCKUP_HINT"].present? %>
     <p id='hint_icon'>?</p>
-    <div id='hint'><%= ENV["LOCKUP_HINT"] %></div>
+    <p id='hint'><%= ENV["LOCKUP_HINT"] %></p>
   <% end %>
 
   <% if params[:return_to].present? %>
