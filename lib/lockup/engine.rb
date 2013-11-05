@@ -2,12 +2,14 @@ module Lockup
   class Engine < ::Rails::Engine
     isolate_namespace Lockup
 
+    config.generators do |g|
+      g.test_framework :rspec, :fixture => false
+      g.assets false
+      g.helper false
+    end
+
     initializer 'lockup.app_controller' do |app|
-      ActiveSupport.on_load(:action_controller) do
-        include Lockup::InstanceMethods
-        extend Lockup::ClassMethods
-        before_filter :check_for_lockup, :except => ["unlock"]
-      end
+      ActiveSupport.on_load(:action_controller) { include Lockup }
     end
   end
 end
