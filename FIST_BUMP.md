@@ -1,4 +1,4 @@
-<img src="http://grantblakeman.com/lockup/lockup_mark.png" width="65" height="87" alt="Lockup Shield" />
+<img src="http://lockupgem.com/github_host/lockup_mark.png" width="65" height="87" alt="Lockup Shield" />
 
 # Lockup – FIST BUMP!
 
