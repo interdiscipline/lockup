@@ -2,7 +2,7 @@
 
 # Lockup – FIST BUMP!
 
-A note of thanks from Grant ([@gblakeman]http://twitter.com/gblakeman) and Jake [@jkmcrg]http://twitter.com/jkmcrg
+A note of thanks from Grant ([@gblakeman](http://twitter.com/gblakeman)) and Jake ([@jkmcrg](http://twitter.com/jkmcrg))
 
 <img src="http://lockupgem.com/github_host/adventure_time_fist_bump.gif" width="450" height="253" alt="Fist Bump!" />
 
