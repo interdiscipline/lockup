@@ -17,7 +17,11 @@ Gem::Specification.new do |s|
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
-  s.test_files = Dir["test/**/*"]
+  s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", ">= 3", "< 5"
+
+  s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency 'capybara'
+  s.add_development_dependency 'launchy' # To use Capybara's `save_and_open_page`
 end
