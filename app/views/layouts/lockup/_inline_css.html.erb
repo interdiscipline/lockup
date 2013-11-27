@@ -127,3 +127,22 @@ form p {
   content: "Hint: ";
   font-weight: bold;
 }
+
+@media only screen and (min-width : 320px) and (max-width : 641px) {
+  body {
+    min-width: 1px;
+    max-width: 641px;
+    -webkit-text-size-adjust: none;
+  }
+
+  .mobile_only {
+    display: inline !important;
+  }
+  .no_mobile {
+    display: none !important;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+}
