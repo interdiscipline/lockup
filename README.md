@@ -54,4 +54,4 @@ The visitor is redirected and the cookie is set without them ever seeing the Loc
 
 ## Contribute
 
-Pull requests are welcome, but please make the to the _development_ branch.
+Pull requests are welcome, but please make them to the _development_ branch.
