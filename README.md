@@ -17,12 +17,10 @@ _“…what's the codeword?”_
 1. Add this line to your application's Gemfile:
 
         gem 'lockup'
-        
+
 2. Define a codeword (see Usage below).
 
-3. That's it!**
-
-  **If you're passing parameters right at your root (i.e. somedomain.com/:parameter), you'll want to place this mount statement in your routes.rb file, _before_ your other route statements:
+3. Mount the engine in your application's routes file:
 
         mount Lockup::Engine, at: '/lockup'
 
@@ -39,15 +37,15 @@ If you think you might need a hint:
 If you're using [Figaro](https://github.com/laserlemon/figaro), set your lockup codeword and hint (optional) in your application.yml file:
 
     LOCKUP_CODEWORD: "love"
-    
+
     LOCKUP_HINT: "Pepé Le Pew"
-    
+
 **Codewords are not case-sensitive, by design. Keep it simple.**
 
 ### Link it with no typing:
 
     http://somedomain.com/or_path/?lockup_codeword=love
-    
+
 The visitor is redirected and the cookie is set without them ever seeing the Lockup splash page.
 
 (Lockup also makes a rudimentary attempt based on user agent to **block major search engine bots/crawlers** from following this link and indexing the site, just in case it ever gets out into the wild.)
