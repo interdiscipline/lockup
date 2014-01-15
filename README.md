@@ -20,7 +20,7 @@ _“…what's the codeword?”_
 
 2. Define a codeword (see Usage below).
 
-3. Mount the engine in your application's routes file:
+3. Mount the engine in your application's routes file (usually first, for best results):
 
         mount Lockup::Engine, at: '/lockup'
 
