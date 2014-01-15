@@ -94,6 +94,12 @@ describe "Accessing a page in the application" do
       reset_user_agent
     end
 
+    it "works with a catch all route" do
+      visit '/this-does-not-exist?lockup_codeword=omgponies'
+
+      page.status_code.should == 404
+    end
+
     context "with a configured hint" do
       it "displays the hint to the user" do
         ENV['LOCKUP_HINT'] = 'Cute 4-legged animals'
