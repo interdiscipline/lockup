@@ -10,7 +10,7 @@ _“Can I come into your fort?”_
 
 _“…what's the codeword?”_
 
-(currently used in production with Rails 3.X and nonimally tested—seems to work—in Rails 4)
+(currently used in production with Rails 3.X and Rails 4)
 
 ## Installation
 
@@ -34,7 +34,7 @@ If you think you might need a hint:
 
     ENV["LOCKUP_HINT"] = 'Something that you do not tell everyone.'
 
-If you're using [Figaro](https://github.com/laserlemon/figaro), set your lockup codeword and hint (optional) in your application.yml file:
+If you're using [Figaro](https://github.com/laserlemon/figaro), set your Lockup codeword and hint (optional) in your application.yml file:
 
     LOCKUP_CODEWORD: "love"
 
@@ -44,7 +44,7 @@ If you're using [Figaro](https://github.com/laserlemon/figaro), set your lockup 
 
 ## Advanced Usage
 
-** You can just use lockup around a specific action**
+### Use Lockup around a specific action or controller:
 
 1. Add this line to your application's Gemfile:
 
@@ -52,9 +52,9 @@ If you're using [Figaro](https://github.com/laserlemon/figaro), set your lockup 
         
 2. Define a codeword (see Usage above).
 
-3. Do not update the routes.rb
+3. Do _not_ update the routes.rb
 
-4. In your controller which would you would like to restrict
+4. In the controller(s) you would like to restrict:
 
         before_action :check_for_lockup, only: [:edit, :update, :new, :destroy, :create]
 
