@@ -42,6 +42,22 @@ If you're using [Figaro](https://github.com/laserlemon/figaro), set your lockup 
 
 **Codewords are not case-sensitive, by design. Keep it simple.**
 
+## Advanced Usage
+
+** You can just use lockup around a specific action**
+
+1. Add this line to your application's Gemfile:
+
+        gem 'lockup'
+        
+2. Define a codeword (see Usage above).
+
+3. Do not update the routes.rb
+
+4. In your controller which would you would like to restrict
+
+        before_action :check_for_lockup, only: [:edit, :update, :new, :destroy, :create]
+
 ### Link it with no typing:
 
     http://somedomain.com/or_path/?lockup_codeword=love
