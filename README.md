@@ -10,7 +10,7 @@ _“Can I come into your fort?”_
 
 _“…what's the codeword?”_
 
-(currently used in production with Rails 3.X and nonimally tested—seems to work—in Rails 4)
+(currently used in production with Rails 3.X and Rails 4)
 
 ## Installation
 
@@ -34,13 +34,27 @@ If you think you might need a hint:
 
     ENV["LOCKUP_HINT"] = 'Something that you do not tell everyone.'
 
-If you're using [Figaro](https://github.com/laserlemon/figaro), set your lockup codeword and hint (optional) in your application.yml file:
+If you're using [Figaro](https://github.com/laserlemon/figaro), set your Lockup codeword and hint (optional) in your application.yml file:
 
     LOCKUP_CODEWORD: "love"
 
     LOCKUP_HINT: "Pepé Le Pew"
 
 **Codewords are not case-sensitive, by design. Keep it simple.**
+
+## Advanced Usage
+
+### Use Lockup around a specific controller:
+
+1. Follow the installtion instructions above.
+
+2. In your application_controller.rb file, add:
+
+        skip_before_action :check_for_lockup
+
+4. In the controller(s) you would like to restrict:
+
+        before_action :check_for_lockup
 
 ### Link it with no typing:
 
