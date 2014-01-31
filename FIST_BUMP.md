@@ -8,3 +8,4 @@ A note of thanks from Grant ([@gblakeman](http://twitter.com/gblakeman)) and Jak
 
 * Thanks to Patrick Reagan (https://github.com/reagent) for adding Capybara support and some sweet optimizations.
 * Thanks to Mike Ackerman (https://github.com/mackermedia) for troubleshooting some Rails 4 issues and proposing a solution.
+* Thanks to Justin (https://github.com/JustinJruby) for the controller-specific tip added to Advanced Usage.
