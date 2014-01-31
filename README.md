@@ -44,19 +44,17 @@ If you're using [Figaro](https://github.com/laserlemon/figaro), set your Lockup 
 
 ## Advanced Usage
 
-### Use Lockup around a specific action or controller:
+### Use Lockup around a specific controller:
 
-1. Add this line to your application's Gemfile:
+1. Follow the installtion instructions above.
 
-        gem 'lockup'
-        
-2. Define a codeword (see Usage above).
+2. In your application_controller.rb file, add:
 
-3. Do _not_ update the routes.rb
+        skip_before_action :check_for_lockup
 
 4. In the controller(s) you would like to restrict:
 
-        before_action :check_for_lockup, only: [:edit, :update, :new, :destroy, :create]
+        before_action :check_for_lockup
 
 ### Link it with no typing:
 
