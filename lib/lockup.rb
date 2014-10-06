@@ -10,9 +10,9 @@ module Lockup
   private
 
   def check_for_lockup
-    if ENV["LOCKUP_CODEWORD"].present? || (Rails.application.secrets.present? && Rails.application.secrets.lockup_codeword.present?)
+    if ENV["LOCKUP_CODEWORD"].present? || (Rails::VERSION::MAJOR >= 4.1 && Rails.application.secrets.lockup_codeword.present?)
       if cookies[:lockup].present?
-        if cookies[:lockup] == ENV["LOCKUP_CODEWORD"].to_s.downcase || (Rails.application.secrets.present? && cookies[:lockup] == Rails.application.secrets.lockup_codeword.to_s.downcase)
+        if cookies[:lockup] == ENV["LOCKUP_CODEWORD"].to_s.downcase || (Rails::VERSION::MAJOR >= 4.1 && cookies[:lockup] == Rails.application.secrets.lockup_codeword.to_s.downcase)
           return
         else
           redirect_to lockup.unlock_path(:return_to => request.fullpath.split('?lockup_codeword')[0], :lockup_codeword => params[:lockup_codeword])
