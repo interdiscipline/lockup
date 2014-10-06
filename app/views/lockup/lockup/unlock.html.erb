@@ -13,9 +13,9 @@
     <p><%= form.password_field "codeword", :value => @codeword, :class => 'nope' %></p>
   <% end %>
     
-  <% if ENV["LOCKUP_HINT"].present? %>
+  <% if ENV["LOCKUP_HINT"].present? || Rails.application.secrets.lockup_hint.present? %>
     <p id='hint_icon'>?</p>
-    <p id='hint'><%= ENV["LOCKUP_HINT"] %></p>
+    <p id='hint'><%= ENV["LOCKUP_HINT"].present? ? ENV["LOCKUP_HINT"] : Rails.application.secrets.lockup_hint %></p>
   <% end %>
 
   <% if params[:return_to].present? %>
