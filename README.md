@@ -8,19 +8,19 @@ A simple gem to more elegantly place a staging server or other in-progress rails
 
 _“Can I come into your fort?”_
 
-_“…what's the codeword?”_
+_“…what’s the codeword?”_
 
 (currently used in production with Rails 3.X and Rails 4)
 
 ## Installation
 
-1. Add this line to your application's Gemfile:
+1. Add this line to your application’s Gemfile:
 
         gem 'lockup'
 
 2. Define a codeword (see Usage below).
 
-3. Mount the engine in your application's routes file (usually first, for best results):
+3. Mount the engine in your application’s routes file (usually first, for best results):
 
         mount Lockup::Engine, at: '/lockup'
 
@@ -34,13 +34,13 @@ If you think you might need a hint:
 
     ENV["LOCKUP_HINT"] = 'Something that you do not tell everyone.'
 
-If you're using Rails 4.1 or greater, you can add your Lockup Codeword via Rails Secrets functionality in your secrets.yml file:
+If you’re using Rails 4.1 or greater, you can add your Lockup Codeword via Rails Secrets functionality in your secrets.yml file:
 
     lockup_codeword: 'love'
 
     lockup_hint: 'Pepé Le Pew'
 
-If you're using [Figaro](https://github.com/laserlemon/figaro), set your Lockup codeword and hint (optional) in your application.yml file:
+If you’re using [Figaro](https://github.com/laserlemon/figaro), set your Lockup codeword and hint (optional) in your application.yml file:
 
     LOCKUP_CODEWORD: 'love'
 
@@ -52,7 +52,7 @@ If you're using [Figaro](https://github.com/laserlemon/figaro), set your Lockup 
 
 ### Use Lockup around a specific controller:
 
-1. Follow the installtion instructions above.
+1. Follow the installation instructions above.
 
 2. In your application_controller.rb file, add:
 
