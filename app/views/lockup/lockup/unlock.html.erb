@@ -8,9 +8,9 @@
 
 <%= form_for :lockup, :url => { :action => 'unlock' } do |form| %>
   <% unless @wrong == true %>
-    <p><%= form.password_field "codeword", :placeholder => "code word" %></p>
+    <p><%= form.password_field "codeword", :placeholder => "code word", :autofocus=>true %></p>
   <% else %>
-    <p><%= form.password_field "codeword", :value => @codeword, :class => 'nope' %></p>
+    <p><%= form.password_field "codeword", :value => @codeword, :class => 'nope', :autofocus=>true %></p>
   <% end %>
     
   <% if ENV["LOCKUP_HINT"].present? || ((Rails::VERSION::MAJOR >= 4 && Rails::VERSION::MINOR >= 1) && Rails.application.secrets.lockup_hint.present?) %>
