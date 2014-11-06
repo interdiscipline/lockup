@@ -15,9 +15,7 @@ module Lockup
         else
           render :nothing => true
         end
-      end
-
-      if request.post? && params[:lockup] && params[:lockup].respond_to?(:'[]')
+      elsif request.post? && params[:lockup] && params[:lockup].respond_to?(:'[]')
         @codeword = params[:lockup][:codeword].to_s.downcase
         @return_to = params[:lockup][:return_to]
         if @codeword == ENV["LOCKUP_CODEWORD"].to_s.downcase || ((Rails::VERSION::MAJOR >= 4 && Rails::VERSION::MINOR >= 1) && @codeword == Rails.application.secrets.lockup_codeword.to_s.downcase)
@@ -26,6 +24,8 @@ module Lockup
         else
           @wrong = true
         end
+      else
+        render :nothing => true
       end
     end
     
