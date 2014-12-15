@@ -13,7 +13,7 @@ module Lockup
             run_redirect
           end
         else
-          render :nothing => true
+          render nothing: true
         end
       elsif request.post?
         if params[:lockup].present? && params[:lockup].respond_to?(:'[]')
@@ -26,7 +26,7 @@ module Lockup
             @wrong = true
           end
         else
-          render :nothing => true
+          render nothing: true
         end
       end
     end
@@ -34,7 +34,7 @@ module Lockup
     private
     
     def set_cookie
-      cookies[:lockup] = { :value => @codeword.to_s.downcase, :expires => (Time.now + 5.years) }
+      cookies[:lockup] = { value: @codeword.to_s.downcase, expires: (Time.now + 5.years) }
     end
     
     def run_redirect

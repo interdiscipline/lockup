@@ -4,8 +4,8 @@ class Post
   attr_accessor :id, :title, :body
 
   POSTS = [
-    {:id => 1, :title => 'Title One', :body => 'Body One'},
-    {:id => 2, :title => 'Title Two', :body => 'Body Two'}
+    {id: 1, title: 'Title One', body: 'Body One'},
+    {id: 2, title: 'Title Two', body: 'Body Two'}
   ]
 
   def self.all
