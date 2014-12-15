@@ -4,7 +4,7 @@ require 'spec_helper'
 describe "Accessing a page in the application" do
 
   def enter_code_word(code_word)
-    fill_in 'code word', :with => code_word
+    fill_in 'code word', with: code_word
     click_on 'Go'
   end
 

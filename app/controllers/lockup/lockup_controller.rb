@@ -13,26 +13,28 @@ module Lockup
             run_redirect
           end
         else
-          render :nothing => true
+          render nothing: true
         end
-      elsif request.post? && params[:lockup] && params[:lockup].respond_to?(:'[]')
-        @codeword = params[:lockup][:codeword].to_s.downcase
-        @return_to = params[:lockup][:return_to]
-        if @codeword == ENV["LOCKUP_CODEWORD"].to_s.downcase || ((Rails::VERSION::MAJOR >= 4 && Rails::VERSION::MINOR >= 1) && @codeword == Rails.application.secrets.lockup_codeword.to_s.downcase)
-          set_cookie
-          run_redirect
+      elsif request.post?
+        if params[:lockup].present? && params[:lockup].respond_to?(:'[]')
+          @codeword = params[:lockup][:codeword].to_s.downcase
+          @return_to = params[:lockup][:return_to]
+          if @codeword == ENV["LOCKUP_CODEWORD"].to_s.downcase || ((Rails::VERSION::MAJOR >= 4 && Rails::VERSION::MINOR >= 1) && @codeword == Rails.application.secrets.lockup_codeword.to_s.downcase)
+            set_cookie
+            run_redirect
+          else
+            @wrong = true
+          end
         else
-          @wrong = true
+          render nothing: true
         end
-      else
-        render :nothing => true
       end
     end
     
     private
     
     def set_cookie
-      cookies[:lockup] = { :value => @codeword.to_s.downcase, :expires => (Time.now + 5.years) }
+      cookies[:lockup] = { value: @codeword.to_s.downcase, expires: (Time.now + 5.years) }
     end
     
     def run_redirect
