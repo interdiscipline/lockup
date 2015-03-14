@@ -42,9 +42,9 @@ If you’re using Rails 4.1 or greater, you can add your Lockup Codeword via Rai
 
 If you’re using [Figaro](https://github.com/laserlemon/figaro), set your Lockup codeword and hint (optional) in your application.yml file:
 
-    LOCKUP_CODEWORD: 'love'
+    lockup_codeword: 'love'
 
-    LOCKUP_HINT: 'Pepé Le Pew'
+    lockup_hint: 'Pepé Le Pew'
 
 **Codewords are not case-sensitive, by design. Keep it simple.**
 

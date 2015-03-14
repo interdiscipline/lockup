@@ -8,7 +8,7 @@ module Lockup
         unless user_agent.match(/crawl|googlebot|slurp|spider|bingbot|tracker|click|parser|spider/)
           @codeword = params[:lockup_codeword].to_s.downcase
           @return_to = params[:return_to]
-          if @codeword == ENV["LOCKUP_CODEWORD"].to_s.downcase || ((Rails::VERSION::MAJOR >= 4 && Rails::VERSION::MINOR >= 1) && @codeword == Rails.application.secrets.lockup_codeword.to_s.downcase)
+          if @codeword == lockup_codeword
             set_cookie
             run_redirect
           end
@@ -19,7 +19,7 @@ module Lockup
         if params[:lockup].present? && params[:lockup].respond_to?(:'[]')
           @codeword = params[:lockup][:codeword].to_s.downcase
           @return_to = params[:lockup][:return_to]
-          if @codeword == ENV["LOCKUP_CODEWORD"].to_s.downcase || ((Rails::VERSION::MAJOR >= 4 && Rails::VERSION::MINOR >= 1) && @codeword == Rails.application.secrets.lockup_codeword.to_s.downcase)
+          if @codeword == lockup_codeword
             set_cookie
             run_redirect
           else
