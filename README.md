@@ -10,7 +10,9 @@ _“Can I come into your fort?”_
 
 _“…what’s the codeword?”_
 
-(currently used in production with Rails 3.X and Rails 4)
+(currently used in production with Rails 3.X and Rails 4.X)
+
+[Demos and more information.](http://lockupgem.com)
 
 ## Installation
 
@@ -73,3 +75,7 @@ The visitor is redirected and the cookie is set without them ever seeing the Loc
 ## Contribute
 
 Pull requests are welcome, but please make them to the _development_ branch.
+
+## Project Site
+
+[lockupgem.com](http://lockupgem.com)
