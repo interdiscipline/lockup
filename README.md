@@ -72,6 +72,10 @@ The visitor is redirected and the cookie is set without them ever seeing the Loc
 
 (Lockup also makes a rudimentary attempt based on user agent to **block major search engine bots/crawlers** from following this link and indexing the site, just in case it ever gets out into the wild.)
 
+### Design Customization
+
+If you would like to change the content or design of the lockup page, you can create the directories app/views/layouts/lockup and app/views/lockup/lockup and populate them with the default content from [here](https://github.com/gblakeman/lockup/tree/master/app/views), and then customize as desired.
+
 ## Contribute
 
 Pull requests are welcome, but please make them to the _development_ branch.
