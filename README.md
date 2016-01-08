@@ -74,11 +74,11 @@ The visitor is redirected and the cookie is set without them ever seeing the Loc
 
 ### Design Customization
 
-If you would like to change the content or design of the lockup page, you can create the directories app/views/layouts/lockup and app/views/lockup/lockup and populate them with the default content from [here](https://github.com/gblakeman/lockup/tree/master/app/views), and then customize as desired.
+If you would like to change the content or design of the lockup page, you can create the directories `app/views/layouts/lockup` and `app/views/lockup/lockup` and populate them with the default content from [here](https://github.com/gblakeman/lockup/tree/master/app/views), and then customize as desired.
 
 ## Contribute
 
-Pull requests are welcome, but please make them to the _development_ branch.
+Pull requests are quite welcome.
 
 ## Project Site
 
