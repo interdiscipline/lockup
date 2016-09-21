@@ -2,7 +2,6 @@ ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path("../dummy/config/environment.rb",  __FILE__)
 require 'byebug'
 require 'rspec/rails'
-require 'rspec/autorun'
 
 Rails.backtrace_cleaner.remove_silencers!
 
@@ -14,4 +13,6 @@ RSpec.configure do |config|
   config.infer_base_class_for_anonymous_controllers = false
   config.order = "random"
   config.include UserAgentHelper, type: :feature
+  config.infer_spec_type_from_file_location!
+  config.expect_with(:rspec) { |c| c.syntax = :should }
 end

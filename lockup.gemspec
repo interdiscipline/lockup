@@ -21,8 +21,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", ">= 3", "< 5"
 
-  s.add_development_dependency 'rspec-rails'
-  s.add_development_dependency 'capybara'
+  s.add_development_dependency 'rspec-rails', "~> 3.5"
+  s.add_development_dependency 'capybara', "~> 2.9"
   s.add_development_dependency 'launchy' # To use Capybara's `save_and_open_page`
   s.add_development_dependency 'byebug'
 end
