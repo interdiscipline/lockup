@@ -5,7 +5,7 @@ describe Lockup::LockupController do
 
   describe 'a malicious user posts invalid data' do
     it 'does not fail' do
-      post 'unlock', {foo: 'bar'}
+      post 'unlock', params: {foo: 'bar'}
     end
   end
   describe 'a malicious user requests a format that is not HTML' do

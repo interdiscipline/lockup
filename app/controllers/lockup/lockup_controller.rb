@@ -1,6 +1,10 @@
 module Lockup
   class LockupController < Lockup::ApplicationController
-    skip_before_filter :check_for_lockup
+    if self.respond_to?(:skip_before_action)
+      skip_before_action :check_for_lockup
+    else
+      skip_before_filter :check_for_lockup
+    end
     
     def unlock
       if params[:lockup_codeword].present?
@@ -13,7 +17,7 @@ module Lockup
             run_redirect
           end
         else
-          render nothing: true
+          head :ok
         end
       elsif request.post?
         if params[:lockup].present? && params[:lockup].respond_to?(:'[]')
@@ -26,7 +30,7 @@ module Lockup
             @wrong = true
           end
         else
-          render nothing: true
+          head :ok
         end
       else
         respond_to do |format|
