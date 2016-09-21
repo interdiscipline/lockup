@@ -24,11 +24,7 @@ module Lockup
   end
 
   def lockup_codeword_present?
-    if ENV["LOCKUP_CODEWORD"].present? || ENV["lockup_codeword"].present? || (Rails.application.respond_to?(:secrets) && Rails.application.secrets.lockup_codeword.present?)
-      true
-    else
-      false
-    end
+    ENV["LOCKUP_CODEWORD"].present? || ENV["lockup_codeword"].present? || (Rails.application.respond_to?(:secrets) && Rails.application.secrets.lockup_codeword.present?)
   end
 
   def lockup_codeword
