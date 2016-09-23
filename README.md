@@ -10,7 +10,7 @@ _“Can I come into your fort?”_
 
 _“…what’s the codeword?”_
 
-(currently used in production with Rails 3.X and Rails 4.X)
+(currently used in production with Rails 3.X, Rails 4.X, and Rails 5.X)
 
 [Demos and more information.](http://lockupgem.com)
 
