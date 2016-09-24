@@ -33,10 +33,7 @@ module Lockup
           head :ok
         end
       else
-        respond_to do |format|
-          format.html
-          format.any { head :not_acceptable }
-        end
+        respond_to :html
       end
     end
     
