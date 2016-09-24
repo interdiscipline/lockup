@@ -23,6 +23,6 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'rspec-rails', "~> 3.5"
   s.add_development_dependency 'capybara', "~> 2.9"
-  s.add_development_dependency 'launchy' # To use Capybara's `save_and_open_page`
-  s.add_development_dependency 'byebug'
+  s.add_development_dependency 'launchy', '~> 2.4' # To use Capybara's `save_and_open_page`
+  s.add_development_dependency 'byebug', '~> 9.0'
 end
