@@ -14,4 +14,30 @@ describe Lockup::LockupController do
       lambda { get 'unlock', format: 'text' }.should raise_error(ActionController::UnknownFormat)
     end
   end
+
+  describe "#cookie_lifetime" do
+    context "COOKIE_LIFETIME_IN_SECONDS is set to an integer" do
+      before { ENV['COOKIE_LIFETIME_IN_SECONDS'] = '123' }
+
+      it "returns the integer" do
+        controller.send(:cookie_lifetime).should eq(123)
+      end
+    end
+
+    context "COOKIE_LIFETIME_IN_SECONDS is not a valid integer" do
+      before { ENV['COOKIE_LIFETIME_IN_SECONDS'] = 'invalid value' }
+
+      it "returns the integer" do
+        controller.send(:cookie_lifetime).should eq(5.years)
+      end
+    end
+
+    context "COOKIE_LIFETIME_IN_SECONDS is not set" do
+      before { ENV.delete('COOKIE_LIFETIME_IN_SECONDS') }
+
+      it "returns the integer" do
+        controller.send(:cookie_lifetime).should eq(5.years)
+      end
+    end
+  end
 end
