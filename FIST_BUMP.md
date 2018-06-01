@@ -6,6 +6,7 @@ A note of thanks from Grant ([@gblakeman](http://twitter.com/gblakeman)) and Jak
 
 <img src="http://lockupgem.com/github_host/adventure_time_fist_bump.gif" width="450" height="253" alt="Fist Bump!" />
 
+* Thanks to Nathan Broadbent (https://github.com/ndbroadbent) for some nice refactoring and an additional check.
 * Thanks (again) to Dan Rabinowitz (https://github.com/danrabinowitz) for prepping the gem for Rails 5.
 * Thanks to Dan Rabinowitz (https://github.com/danrabinowitz) for catching a js error when hints are not used & for providing some additional places for bots to die.
 * Thanks to Justin (https://github.com/JustinJruby) for the controller-specific tip added to Advanced Usage.
