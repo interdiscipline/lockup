@@ -14,17 +14,10 @@ module Lockup
   private
 
   def check_for_lockup
-    if lockup_codeword_present?
-      if cookies[:lockup].present?
-        if cookies[:lockup] == lockup_codeword
-          return
-        else
-          redirect_to lockup.unlock_path(return_to: request.fullpath.split('?lockup_codeword')[0], lockup_codeword: params[:lockup_codeword])
-        end
-      else
-        redirect_to lockup.unlock_path(return_to: request.fullpath.split('?lockup_codeword')[0], lockup_codeword: params[:lockup_codeword])
-      end
-    end
+    return unless respond_to?(:lockup) && lockup_codeword_present?
+    return if cookies[:lockup].present? && cookies[:lockup] == lockup_codeword
+
+    redirect_to lockup.unlock_path(return_to: request.fullpath.split('?lockup_codeword')[0], lockup_codeword: params[:lockup_codeword])
   end
 
   def lockup_codeword_present?
