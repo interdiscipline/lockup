@@ -42,7 +42,8 @@ module Lockup
   end
 
   def cookie_lifetime
-    seconds = ENV['COOKIE_LIFETIME_IN_SECONDS'].to_i
+    weeks = ENV['COOKIE_LIFETIME_IN_WEEKS'].to_f
+    seconds = (weeks * 1.week).to_i
     if seconds > 0
       seconds
     else

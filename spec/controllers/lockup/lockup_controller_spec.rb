@@ -16,24 +16,24 @@ describe Lockup::LockupController do
   end
 
   describe "#cookie_lifetime" do
-    context "COOKIE_LIFETIME_IN_SECONDS is set to an integer" do
-      before { ENV['COOKIE_LIFETIME_IN_SECONDS'] = '123' }
+    context "COOKIE_LIFETIME_IN_WEEKS is set to an integer" do
+      before { ENV['COOKIE_LIFETIME_IN_WEEKS'] = '52' }
 
       it "returns the integer" do
-        controller.send(:cookie_lifetime).should eq(123)
+        controller.send(:cookie_lifetime).should eq(52.weeks)
       end
     end
 
-    context "COOKIE_LIFETIME_IN_SECONDS is not a valid integer" do
-      before { ENV['COOKIE_LIFETIME_IN_SECONDS'] = 'invalid value' }
+    context "COOKIE_LIFETIME_IN_WEEKS is not a valid integer" do
+      before { ENV['COOKIE_LIFETIME_IN_WEEKS'] = 'invalid value' }
 
       it "returns the integer" do
         controller.send(:cookie_lifetime).should eq(5.years)
       end
     end
 
-    context "COOKIE_LIFETIME_IN_SECONDS is not set" do
-      before { ENV.delete('COOKIE_LIFETIME_IN_SECONDS') }
+    context "COOKIE_LIFETIME_IN_WEEKS is not set" do
+      before { ENV.delete('COOKIE_LIFETIME_IN_WEEKS') }
 
       it "returns the integer" do
         controller.send(:cookie_lifetime).should eq(5.years)
