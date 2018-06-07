@@ -33,4 +33,14 @@ module Lockup
       Rails.application.secrets.lockup_codeword.to_s.downcase
     end
   end
+
+  def cookie_lifetime
+    weeks = ENV['COOKIE_LIFETIME_IN_WEEKS'].to_f
+    seconds = (weeks * 1.week).to_i
+    if seconds > 0
+      seconds
+    else
+      5.years
+    end
+  end
 end
