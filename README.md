@@ -72,6 +72,14 @@ The visitor is redirected and the cookie is set without them ever seeing the Loc
 
 (Lockup also makes a rudimentary attempt based on user agent to **block major search engine bots/crawlers** from following this link and indexing the site, just in case it ever gets out into the wild.)
 
+### Set a custom lifetime for cookie
+
+The cookie set by Lockup defaults to 5 years. If you want to set a shorter amount of time, you can specify a number of weeks:
+
+    ENV["COOKIE_LIFETIME_IN_WEEKS"] = 4
+
+    cookie_lifetime_in_weeks: 4
+
 ### Design Customization
 
 If you would like to change the content or design of the lockup page, you can create the directories `app/views/layouts/lockup` and `app/views/lockup/lockup` and populate them with the default content from [here](https://github.com/gblakeman/lockup/tree/master/app/views), and then customize as desired.
