@@ -34,8 +34,18 @@ module Lockup
     end
   end
 
+  def cookie_lifetime_variable
+    if ENV["COOKIE_LIFETIME_IN_WEEKS"].present?
+      ENV["COOKIE_LIFETIME_IN_WEEKS"]
+    elsif ENV["cookie_lifetime_in_weeks"].present?
+      ENV["cookie_lifetime_in_weeks"]
+    elsif Rails.application.respond_to?(:secrets) && Rails.application.secrets.cookie_lifetime_in_weeks.present?
+      Rails.application.secrets.cookie_lifetime_in_weeks
+    end
+  end
+
   def cookie_lifetime
-    weeks = ENV['COOKIE_LIFETIME_IN_WEEKS'].to_f
+    weeks = (cookie_lifetime_variable || 0).to_f
     seconds = (weeks * 1.week).to_i
     if seconds > 0
       seconds
