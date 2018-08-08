@@ -112,6 +112,14 @@ describe "Accessing a page in the application" do
       end
     end
 
-  end
+    context "without a user agent" do
+      before(:each) do
+        set_user_agent_to(nil)
+      end
 
+      it "doesn't blow up" do
+        visit '/posts?lockup_codeword=omgponies'
+      end
+    end
+  end
 end
