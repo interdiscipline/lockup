@@ -17,11 +17,17 @@ module Lockup
     return unless respond_to?(:lockup) && lockup_codeword_present?
     return if cookies[:lockup].present? && cookies[:lockup] == lockup_codeword
 
-    redirect_to lockup.unlock_path(return_to: request.fullpath.split('?lockup_codeword')[0], lockup_codeword: params[:lockup_codeword])
+    redirect_to lockup.unlock_path(
+      return_to: request.fullpath.split('?lockup_codeword')[0],
+      lockup_codeword: params[:lockup_codeword],
+    )
   end
 
   def lockup_codeword_present?
-    ENV["LOCKUP_CODEWORD"].present? || ENV["lockup_codeword"].present? || (Rails.application.respond_to?(:secrets) && Rails.application.secrets.lockup_codeword.present?) || (Rails.application.respond_to?(:credentials) && Rails.application.credentials.lockup_codeword.present?)
+    ENV["LOCKUP_CODEWORD"].present? ||
+    ENV["lockup_codeword"].present? ||
+    (Rails.application.respond_to?(:secrets) && Rails.application.secrets.lockup_codeword.present?) ||
+    (Rails.application.respond_to?(:credentials) && Rails.application.credentials.lockup_codeword.present?)
   end
 
   def lockup_codeword
