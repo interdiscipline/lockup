@@ -9,6 +9,7 @@ describe Lockup::LockupController do
       post 'unlock', params: {foo: 'bar'}
     end
   end
+
   describe 'a malicious user requests a format that is not HTML' do
     it 'throws an unknown format error' do
       lambda { get 'unlock', format: 'text' }.should raise_error(ActionController::UnknownFormat)
