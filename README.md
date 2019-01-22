@@ -58,7 +58,7 @@ If you’re using [Figaro](https://github.com/laserlemon/figaro), set your Locku
 
 2. In your application_controller.rb file, add:
 
-        skip_before_action :check_for_lockup
+        skip_before_action :check_for_lockup, raise: false
 
 4. In the controller(s) you would like to restrict:
 
