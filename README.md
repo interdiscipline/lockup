@@ -36,7 +36,7 @@ If you think you might need a hint:
 
     ENV["LOCKUP_HINT"] = 'Something that you do not tell everyone.'
 
-If you’re using Rails 4.1 or greater, you can add your Lockup Codeword via Rails Secrets functionality in your secrets.yml file:
+If you’re using Rails >= 4.1 or Rails >= 5.2, you can add your Lockup Codeword via Rails Secrets or Rails Credentials functionality in your secrets.yml or credentials.yml.enc file, respectively:
 
     lockup_codeword: 'love'
 
