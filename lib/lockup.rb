@@ -49,6 +49,8 @@ module Lockup
       ENV["cookie_lifetime_in_weeks"]
     elsif Rails.application.respond_to?(:secrets) && Rails.application.secrets.cookie_lifetime_in_weeks.present?
       Rails.application.secrets.cookie_lifetime_in_weeks
+    elsif Rails.application.respond_to?(:credentials) && Rails.application.credentials.cookie_lifetime_in_weeks.present?
+      Rails.application.credentials.cookie_lifetime_in_weeks
     end
   end
 
