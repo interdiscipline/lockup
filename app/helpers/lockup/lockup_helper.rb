@@ -13,8 +13,10 @@ module Lockup
         ENV["LOCKUP_HINT"].to_s
       elsif ENV["lockup_hint"].present?
         ENV["lockup_hint"].to_s
-      elsif (Rails::VERSION::MAJOR >= 4 && Rails::VERSION::MINOR >= 1) && Rails.application.secrets.lockup_hint.present?
+      elsif Rails.application.respond_to?(:secrets) && Rails.application.secrets.lockup_hint.present?
         Rails.application.secrets.lockup_hint.to_s
+      elsif Rails.application.respond_to?(:credentials) && Rails.application.credentials.lockup_hint.present?
+        Rails.application.credentials.lockup_hint.to_s
       end
     end
 
