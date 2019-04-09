@@ -2,11 +2,10 @@ module Lockup
   module LockupHelper
 
     def lockup_hint_present?
-      if ENV["LOCKUP_HINT"].present? || ENV["lockup_hint"].present? || ((Rails::VERSION::MAJOR >= 4 && Rails::VERSION::MINOR >= 1) && Rails.application.secrets.lockup_hint.present?)
-        true
-      else
-        false
-      end
+      ENV["LOCKUP_HINT"].present? ||
+      ENV["lockup_hint"].present? ||
+      (Rails.application.respond_to?(:secrets) && Rails.application.secrets.lockup_hint.present?) ||
+      (Rails.application.respond_to?(:credentials) && Rails.application.credentials.lockup_hint.present?)
     end
 
     def lockup_hint_display
