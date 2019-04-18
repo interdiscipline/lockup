@@ -1,7 +1,8 @@
 module Lockup
   module LockupHelper
     def lockup_hint
-      ENV['LOCKUP_HINT'] ||
+      @lockup_hint ||=
+        ENV['LOCKUP_HINT'] ||
         ENV['lockup_hint'] ||
         lockup_hint_from_config(:secrets) ||
         lockup_hint_from_config(:credentials)
