@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Lockup
   module LockupHelper
     def lockup_hint
