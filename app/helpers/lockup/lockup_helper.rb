@@ -7,7 +7,7 @@ module Lockup
         ENV['LOCKUP_HINT'] ||
         ENV['lockup_hint'] ||
         lockup_hint_from_config(:secrets) ||
-        lockup_hint_from_config(:credentials)
+        lockup_hint_from_config
     end
 
     private
