@@ -6,7 +6,7 @@ module Lockup
   extend ActiveSupport::Concern
 
   included do
-    if self.respond_to?(:before_action)
+    if respond_to?(:before_action)
       before_action :check_for_lockup, except: ['unlock']
     else
       before_filter :check_for_lockup, except: ['unlock']
