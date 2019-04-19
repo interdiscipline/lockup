@@ -18,7 +18,7 @@ module Lockup
 
     store.lockup.respond_to?(:fetch) &&
       store.lockup.fetch(setting, store.public_send("lockup_#{setting}")) ||
-      store.public_send("lockup_#{setting}")
+      store.public_send("lockup_#{setting}") || store.public_send(setting)
   end
 
   private
