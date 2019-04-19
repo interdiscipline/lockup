@@ -35,9 +35,9 @@ module Lockup
 
   def lockup_codeword_present?
     ENV["LOCKUP_CODEWORD"].present? ||
-    ENV["lockup_codeword"].present? ||
-    (Rails.application.respond_to?(:secrets) && Rails.application.secrets.lockup_codeword.present?) ||
-    (Rails.application.respond_to?(:credentials) && Rails.application.credentials.lockup_codeword.present?)
+      ENV["lockup_codeword"].present? ||
+      Lockup.from_config(:codeword, :secrets).present? ||
+      Lockup.from_config(:codeword).present?
   end
 
   def lockup_codeword
@@ -45,10 +45,10 @@ module Lockup
       ENV["LOCKUP_CODEWORD"].to_s.downcase
     elsif ENV["lockup_codeword"].present?
       ENV["lockup_codeword"].to_s.downcase
-    elsif Rails.application.respond_to?(:secrets) && Rails.application.secrets.lockup_codeword.present?
-      Rails.application.secrets.lockup_codeword.to_s.downcase
-    elsif Rails.application.respond_to?(:credentials) && Rails.application.credentials.lockup_codeword.present?
-      Rails.application.credentials.lockup_codeword.to_s.downcase
+    elsif Lockup.from_config(:codeword, :secrets).present?
+      Lockup.from_config(:codeword, :secrets).downcase
+    elsif Lockup.from_config(:codeword).present?
+      Lockup.from_config(:codeword).downcase
     end
   end
 
