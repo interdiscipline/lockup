@@ -50,8 +50,7 @@ module Lockup
   end
 
   def lockup_cookie_lifetime
-    weeks = (cookie_lifetime || 0).to_f
-    seconds = (weeks * 1.week).to_i
+    seconds = (cookie_lifetime.to_f * 1.week).to_i
     if seconds > 0
       seconds
     else
