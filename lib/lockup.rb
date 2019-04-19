@@ -42,15 +42,10 @@ module Lockup
   end
 
   def cookie_lifetime_variable
-    if ENV["COOKIE_LIFETIME_IN_WEEKS"].present?
-      ENV["COOKIE_LIFETIME_IN_WEEKS"]
-    elsif ENV["cookie_lifetime_in_weeks"].present?
-      ENV["cookie_lifetime_in_weeks"]
-    elsif Rails.application.respond_to?(:secrets) && Rails.application.secrets.cookie_lifetime_in_weeks.present?
-      Rails.application.secrets.cookie_lifetime_in_weeks
-    elsif Rails.application.respond_to?(:credentials) && Rails.application.credentials.cookie_lifetime_in_weeks.present?
-      Rails.application.credentials.cookie_lifetime_in_weeks
-    end
+    ENV["COOKIE_LIFETIME_IN_WEEKS"] ||
+      ENV["cookie_lifetime_in_weeks"] ||
+      Lockup.from_config(:cookie_lifetime_in_weeks, :secrets) ||
+      Lockup.from_config(:cookie_lifetime_in_weeks)
   end
 
   def cookie_lifetime
