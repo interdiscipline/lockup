@@ -41,16 +41,16 @@ module Lockup
       Lockup.from_config(:codeword)
   end
 
-  def cookie_lifetime_variable
-    @cookie_lifetime_variable ||=
+  def cookie_lifetime
+    @cookie_lifetime ||=
       ENV["COOKIE_LIFETIME_IN_WEEKS"] ||
       ENV["cookie_lifetime_in_weeks"] ||
       Lockup.from_config(:cookie_lifetime_in_weeks, :secrets) ||
       Lockup.from_config(:cookie_lifetime_in_weeks)
   end
 
-  def cookie_lifetime
-    weeks = (cookie_lifetime_variable || 0).to_f
+  def lockup_cookie_lifetime
+    weeks = (cookie_lifetime || 0).to_f
     seconds = (weeks * 1.week).to_i
     if seconds > 0
       seconds

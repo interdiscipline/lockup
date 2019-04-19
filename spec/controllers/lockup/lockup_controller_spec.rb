@@ -21,7 +21,7 @@ describe Lockup::LockupController do
       before { ENV['COOKIE_LIFETIME_IN_WEEKS'] = '52' }
 
       it "returns the integer" do
-        controller.send(:cookie_lifetime).should eq(52.weeks)
+        controller.send(:lockup_cookie_lifetime).should eq(52.weeks)
       end
     end
 
@@ -29,7 +29,7 @@ describe Lockup::LockupController do
       before { ENV['COOKIE_LIFETIME_IN_WEEKS'] = 'invalid value' }
 
       it "returns the integer" do
-        controller.send(:cookie_lifetime).should eq(5.years)
+        controller.send(:lockup_cookie_lifetime).should eq(5.years)
       end
     end
 
@@ -37,7 +37,7 @@ describe Lockup::LockupController do
       before { ENV.delete('COOKIE_LIFETIME_IN_WEEKS') }
 
       it "returns the integer" do
-        controller.send(:cookie_lifetime).should eq(5.years)
+        controller.send(:lockup_cookie_lifetime).should eq(5.years)
       end
     end
   end
