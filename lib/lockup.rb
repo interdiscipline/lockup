@@ -11,6 +11,16 @@ module Lockup
     end
   end
 
+  def self.from_config(setting, secrets_or_credentials = :credentials)
+    return unless Rails.application.respond_to?(secrets_or_credentials)
+
+    store = Rails.application.public_send(secrets_or_credentials)
+
+    store.lockup.respond_to?(:fetch) &&
+      store.lockup.fetch(setting, store.public_send("lockup_#{setting}")) ||
+      store.public_send("lockup_#{setting}")
+  end
+
   private
 
   def check_for_lockup
