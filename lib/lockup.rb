@@ -24,8 +24,8 @@ module Lockup
   private
 
   def check_for_lockup
-    return unless respond_to?(:lockup) && lockup_codeword_present?
-    return if cookies[:lockup].present? && cookies[:lockup] == lockup_codeword
+    return unless respond_to?(:lockup) && lockup_codeword
+    return if cookies[:lockup].present? && cookies[:lockup] == lockup_codeword.to_s.downcase
 
     redirect_to lockup.unlock_path(
       return_to: request.fullpath.split('?lockup_codeword')[0],
@@ -33,23 +33,11 @@ module Lockup
     )
   end
 
-  def lockup_codeword_present?
-    ENV["LOCKUP_CODEWORD"].present? ||
-      ENV["lockup_codeword"].present? ||
-      Lockup.from_config(:codeword, :secrets).present? ||
-      Lockup.from_config(:codeword).present?
-  end
-
   def lockup_codeword
-    if ENV["LOCKUP_CODEWORD"].present?
-      ENV["LOCKUP_CODEWORD"].to_s.downcase
-    elsif ENV["lockup_codeword"].present?
-      ENV["lockup_codeword"].to_s.downcase
-    elsif Lockup.from_config(:codeword, :secrets).present?
-      Lockup.from_config(:codeword, :secrets).downcase
-    elsif Lockup.from_config(:codeword).present?
-      Lockup.from_config(:codeword).downcase
-    end
+    ENV["LOCKUP_CODEWORD"] ||
+      ENV["lockup_codeword"] ||
+      Lockup.from_config(:codeword, :secrets) ||
+      Lockup.from_config(:codeword)
   end
 
   def cookie_lifetime_variable
