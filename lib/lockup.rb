@@ -1,13 +1,13 @@
-require "lockup/engine"
+require 'lockup/engine'
 
 module Lockup
   extend ActiveSupport::Concern
 
   included do
     if self.respond_to?(:before_action)
-      before_action :check_for_lockup, except: ["unlock"]
+      before_action :check_for_lockup, except: ['unlock']
     else
-      before_filter :check_for_lockup, except: ["unlock"]
+      before_filter :check_for_lockup, except: ['unlock']
     end
   end
 
@@ -35,16 +35,16 @@ module Lockup
 
   def lockup_codeword
     @lockup_codeword ||=
-      ENV["LOCKUP_CODEWORD"] ||
-      ENV["lockup_codeword"] ||
+      ENV['LOCKUP_CODEWORD'] ||
+      ENV['lockup_codeword'] ||
       Lockup.from_config(:codeword, :secrets) ||
       Lockup.from_config(:codeword)
   end
 
   def cookie_lifetime
     @cookie_lifetime ||=
-      ENV["COOKIE_LIFETIME_IN_WEEKS"] ||
-      ENV["cookie_lifetime_in_weeks"] ||
+      ENV['COOKIE_LIFETIME_IN_WEEKS'] ||
+      ENV['cookie_lifetime_in_weeks'] ||
       Lockup.from_config(:cookie_lifetime_in_weeks, :secrets) ||
       Lockup.from_config(:cookie_lifetime_in_weeks)
   end
