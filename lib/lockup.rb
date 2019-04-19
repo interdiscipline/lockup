@@ -35,20 +35,20 @@ module Lockup
     )
   end
 
-  def lockup_codeword
-    @lockup_codeword ||=
-      ENV['LOCKUP_CODEWORD'] ||
-      ENV['lockup_codeword'] ||
-      Lockup.from_config(:codeword, :secrets) ||
-      Lockup.from_config(:codeword)
-  end
-
   def cookie_lifetime
     @cookie_lifetime ||=
       ENV['COOKIE_LIFETIME_IN_WEEKS'] ||
       ENV['cookie_lifetime_in_weeks'] ||
       Lockup.from_config(:cookie_lifetime_in_weeks, :secrets) ||
       Lockup.from_config(:cookie_lifetime_in_weeks)
+  end
+
+  def lockup_codeword
+    @lockup_codeword ||=
+      ENV['LOCKUP_CODEWORD'] ||
+      ENV['lockup_codeword'] ||
+      Lockup.from_config(:codeword, :secrets) ||
+      Lockup.from_config(:codeword)
   end
 
   def lockup_cookie_lifetime
