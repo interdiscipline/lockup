@@ -34,7 +34,8 @@ module Lockup
   end
 
   def lockup_codeword
-    ENV["LOCKUP_CODEWORD"] ||
+    @lockup_codeword ||=
+      ENV["LOCKUP_CODEWORD"] ||
       ENV["lockup_codeword"] ||
       Lockup.from_config(:codeword, :secrets) ||
       Lockup.from_config(:codeword)
