@@ -31,7 +31,7 @@ module Lockup
 
     redirect_to lockup.unlock_path(
       return_to: request.fullpath.split('?lockup_codeword')[0],
-      lockup_codeword: params[:lockup_codeword],
+      lockup_codeword: params[:lockup_codeword]
     )
   end
 
