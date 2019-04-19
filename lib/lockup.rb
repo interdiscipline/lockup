@@ -42,7 +42,8 @@ module Lockup
   end
 
   def cookie_lifetime_variable
-    ENV["COOKIE_LIFETIME_IN_WEEKS"] ||
+    @cookie_lifetime_variable ||=
+      ENV["COOKIE_LIFETIME_IN_WEEKS"] ||
       ENV["cookie_lifetime_in_weeks"] ||
       Lockup.from_config(:cookie_lifetime_in_weeks, :secrets) ||
       Lockup.from_config(:cookie_lifetime_in_weeks)
