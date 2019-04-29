@@ -24,7 +24,7 @@ describe "Accessing a page in the application" do
   end
 
   context "with a configured code word" do
-    before { ENV['LOCKUP_CODEWORD'] = 'omgponies' }
+    before { ENV['LOCKUP_CODEWORD'] = 'OMGponies' }
 
     it "redirects to the password entry screen" do
       visit '/posts'

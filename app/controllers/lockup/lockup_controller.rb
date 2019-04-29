@@ -18,7 +18,7 @@ module Lockup
 
         @codeword = params[:lockup_codeword].to_s.downcase
         @return_to = params[:return_to]
-        if @codeword == lockup_codeword
+        if @codeword == lockup_codeword.to_s.downcase
           set_cookie
           run_redirect
         end
@@ -26,7 +26,7 @@ module Lockup
         if params[:lockup].present? && params[:lockup].respond_to?(:'[]')
           @codeword = params[:lockup][:codeword].to_s.downcase
           @return_to = params[:lockup][:return_to]
-          if @codeword == lockup_codeword
+          if @codeword == lockup_codeword.to_s.downcase
             set_cookie
             run_redirect
           else
@@ -43,7 +43,7 @@ module Lockup
     private
 
     def set_cookie
-      cookies[:lockup] = { value: @codeword.to_s.downcase, expires: (Time.now + cookie_lifetime) }
+      cookies[:lockup] = { value: @codeword.to_s.downcase, expires: (Time.now + lockup_cookie_lifetime) }
     end
 
     def run_redirect

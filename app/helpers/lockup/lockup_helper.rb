@@ -1,24 +1,13 @@
+# frozen_string_literal: true
+
 module Lockup
   module LockupHelper
-
-    def lockup_hint_present?
-      ENV["LOCKUP_HINT"].present? ||
-      ENV["lockup_hint"].present? ||
-      (Rails.application.respond_to?(:secrets) && Rails.application.secrets.lockup_hint.present?) ||
-      (Rails.application.respond_to?(:credentials) && Rails.application.credentials.lockup_hint.present?)
+    def lockup_hint
+      @lockup_hint ||=
+        ENV['LOCKUP_HINT'] ||
+        ENV['lockup_hint'] ||
+        ::Lockup.from_config(:hint, :secrets) ||
+        ::Lockup.from_config(:hint)
     end
-
-    def lockup_hint_display
-      if ENV["LOCKUP_HINT"].present?
-        ENV["LOCKUP_HINT"].to_s
-      elsif ENV["lockup_hint"].present?
-        ENV["lockup_hint"].to_s
-      elsif Rails.application.respond_to?(:secrets) && Rails.application.secrets.lockup_hint.present?
-        Rails.application.secrets.lockup_hint.to_s
-      elsif Rails.application.respond_to?(:credentials) && Rails.application.credentials.lockup_hint.present?
-        Rails.application.credentials.lockup_hint.to_s
-      end
-    end
-
   end
 end
