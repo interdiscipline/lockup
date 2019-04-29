@@ -38,15 +38,25 @@ If you think you might need a hint:
 
 If you’re using Rails >= 4.1 or Rails >= 5.2, you can add your Lockup Codeword via Rails Secrets or Rails Credentials functionality in your secrets.yml or credentials.yml.enc file, respectively:
 
-    lockup_codeword: 'love'
+```yml
+lockup_codeword: 'love'
+lockup_hint: 'Pepé Le Pew'
+```
 
-    lockup_hint: 'Pepé Le Pew'
+Alternately, Rails Credentials in >= 5.2 may be organized under the `lockup` namespace:
+
+```yml
+lockup:
+  codeword: 'love'
+  hint: 'Pepé Le Pew'
+```
 
 If you’re using [Figaro](https://github.com/laserlemon/figaro), set your Lockup codeword and hint (optional) in your application.yml file:
 
-    lockup_codeword: 'love'
-
-    lockup_hint: 'Pepé Le Pew'
+```yml
+lockup_codeword: 'love'
+lockup_hint: 'Pepé Le Pew'
+```
 
 **Codewords are not case-sensitive, by design. Keep it simple.**
 
