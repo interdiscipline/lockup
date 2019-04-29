@@ -6,6 +6,7 @@ A note of thanks from Grant ([@gblakeman](http://twitter.com/gblakeman)) and Jak
 
 <img src="http://lockupgem.com/github_host/adventure_time_fist_bump.gif" width="450" height="253" alt="Fist Bump!" />
 
+* Thanks to @guaguasi (https://github.com/guaguasi) for the addition Credentials support and some great refactoring.
 * Thanks to Maxim Filippov (https://github.com/maksimf) for the autofocus input.
 * Thanks to Marc van Hoof (https://github.com/mvanh) for adding support for Rails Credentials.
 * Thanks to Nathan Broadbent (https://github.com/ndbroadbent) for finding an issue when the `HTTP_USER_AGENT` header is missing.
