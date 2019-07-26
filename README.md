@@ -18,25 +18,33 @@ _“…what’s the codeword?”_
 
 1. Add this line to your application’s Gemfile:
 
-        gem 'lockup'
+```ruby
+gem 'lockup'
+```
 
 2. Define a codeword (see Usage below).
 
 3. Mount the engine in your application’s routes file (usually first, for best results):
 
-        mount Lockup::Engine, at: '/lockup'
+```ruby
+mount Lockup::Engine, at: '/lockup'
+```
 
 ## Usage
 
 To set a codeword, define LOCKUP_CODEWORD in your environments/your_environment.rb file like so:
 
-    ENV["LOCKUP_CODEWORD"] = 'secret'
+```ruby
+ENV['LOCKUP_CODEWORD'] = 'secret'
+```
 
 If you think you might need a hint:
 
-    ENV["LOCKUP_HINT"] = 'Something that you do not tell everyone.'
+```ruby
+ENV['LOCKUP_HINT'] = 'Something that you do not tell everyone.'
+```
 
-If you’re using Rails >= 4.1 or Rails >= 5.2, you can add your Lockup Codeword via Rails Secrets or Rails Credentials functionality in your secrets.yml or credentials.yml.enc file, respectively:
+If you’re using Rails >= 4.1 or Rails >= 5.2, you can add your Lockup Codeword via Rails Secrets or Rails Credentials functionality in your `secrets.yml` or `credentials.yml.enc` file, respectively:
 
 ```yml
 lockup_codeword: 'love'
@@ -68,11 +76,15 @@ lockup_hint: 'Pepé Le Pew'
 
 2. In your application_controller.rb file, add:
 
-        skip_before_action :check_for_lockup, raise: false
+```ruby
+skip_before_action :check_for_lockup, raise: false
+```
 
 4. In the controller(s) you would like to restrict:
 
-        before_action :check_for_lockup
+```ruby
+before_action :check_for_lockup
+```
 
 ### Link it with no typing:
 
@@ -86,9 +98,11 @@ The visitor is redirected and the cookie is set without them ever seeing the Loc
 
 The cookie set by Lockup defaults to 5 years. If you want to set a shorter amount of time, you can specify a number of weeks:
 
-    ENV["COOKIE_LIFETIME_IN_WEEKS"] = 4
+```ruby
+ENV['COOKIE_LIFETIME_IN_WEEKS'] = 4
 
-    cookie_lifetime_in_weeks: 4
+cookie_lifetime_in_weeks: 4
+```
 
 ### Design Customization
 
