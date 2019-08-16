@@ -114,4 +114,4 @@ Pull requests are quite welcome.
 
 ## Project Site
 
-[lockupgem.com](http://lockupgem.com)
+[lockupgem.com](https://lockupgem.com)
