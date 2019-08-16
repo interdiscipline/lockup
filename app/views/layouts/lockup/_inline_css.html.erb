@@ -1,40 +1,22 @@
 body {
-  padding: 12%;
-  font-family: Helvetica, sans-serif;
   color: #fff;
   background-color: #252525;
   overflow: hidden;
-}
-h1 {
-  margin: 0 auto;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  width: 100%;
   font-family: Helvetica, sans-serif;
-  font-size: 60px;
-  text-align: center;
-  line-height: 70px;
 }
+
 form input[type='password'] {
   display: block;
   margin: 0 auto;
   padding: 16px;
   width: 200px;
   color: #fff;
-  font-family: Helvetica, sans-serif;
   font-size: 30px;
   text-align: center;
   background-color: #535353;
   border: 1px solid #ccc;
-  -webkit-appearance: none;
   outline: none;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
-  -webkit-transition: all 150ms ease-in-out;
-  -moz-transition: all 150ms ease-in-out;
-  -ms-transition: all 150ms ease-in-out;
-  -o-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
 }
 form input[type='password']:hover {
@@ -53,21 +35,13 @@ form button {
   padding: 6px 16px 6px 16px;
   width: 232px;
   color: #fff;
-  font-family: Helvetica, sans-serif;
   font-size: 30px;
   text-align: center;
   background-color: #1ad056;
   border: 0;
   cursor: pointer;
-  -webkit-appearance: none;
   outline: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
-  -webkit-transition: all 150ms ease-in-out;
-  -moz-transition: all 150ms ease-in-out;
-  -ms-transition: all 150ms ease-in-out;
-  -o-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
 }
 form button:hover,
@@ -76,10 +50,6 @@ form button:focus {
 }
 form button:active {
   background-color: #266cec;
-  -webkit-transition: all 0 ease-in-out;
-  -moz-transition: all 0 ease-in-out;
-  -ms-transition: all 0 ease-in-out;
-  -o-transition: all 0 ease-in-out;
   transition: all 0 ease-in-out;
 }
 form p {
@@ -107,8 +77,6 @@ form p {
   line-height: 26px;
   font-weight: bold;
   margin: -91px 0 0 135px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
   border-radius: 15px;
   background: #fff;
 }
@@ -118,178 +86,15 @@ form p {
   overflow: hidden;
   line-height: 0px;
   margin-top: -16px;
-  -webkit-transition: all 150ms ease-in-out;
-  -moz-transition: all 150ms ease-in-out;
-  -ms-transition: all 150ms ease-in-out;
-  -o-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
 }
+
 #hint.show {
   line-height: 18px;
   margin-bottom: 23px;
 }
+
 #hint:before {
   content: "Hint: ";
   font-weight: bold;
-}
-
-@media only screen and (min-width : 1149px) and (max-width : 1570px) {
-
-  h1 {
-    width: 72%;
-  }
-
-}
-
-@media only screen and (min-width : 769px) and (max-width : 1148px) {
-
-  h1 {
-    width: 82%;
-  }
-
-}
-
-@media only screen and (min-width : 690px) and (max-width : 768px) {
-
-  h1 {
-    width: 80%;
-  }
-
-}
-
-@media only screen and (min-width : 641px) and (max-width : 689px) {
-
-  h1 {
-    width: 88%;
-  }
-
-}
-
-@media only screen and (min-width : 563px) and (max-width : 640px) {
-
-  h1 {
-    width: 90%;
-  }
-
-}
-
-@media only screen and (min-width : 481px) and (max-width : 562px) {
-
-  h1 {
-    width: 90%;
-  }
-
-}
-
-@media only screen and (min-width : 410px) and (max-width : 480px) {
-
-  h1 {
-    width: 84%;
-  }
-
-}
-
-@media only screen and (min-width : 350px) and (max-width : 409px) {
-
-  h1 {
-    width: 100%;
-  }
-
-}
-
-@media only screen and (min-width : 350px) and (max-width : 640px) {
-  body {
-    min-width: 1px;
-    max-width: 640px;
-    -webkit-text-size-adjust: none;
-  }
-
-  .mobile_only {
-    display: inline !important;
-  }
-  .no_mobile {
-    display: none !important;
-  }
-
-  h1 {
-    margin-top: 0px;
-    font-size: 36px;
-    line-height: 42px;
-  }
-  form input[type='password'] {
-    padding: 12px 8px;
-    width: 175px;
-    font-size: 22px;
-  }
-  form button {
-    width: 200px;
-    font-size: 22px;
-  }
-  .hmm h3 {
-    width: 90%;
-    font-size: 16px;
-  }
-  #hint_icon {
-    width: 20px;
-    height: 20px;
-    font-size: 12px;
-    line-height: 22px;
-    margin: -78px 0 0 105px;
-  }
-  #hint {
-    font-size: 14px;
-    margin-top: -12px;
-  }
-  #hint.show {
-    margin-bottom: 28px;
-  }
-}
-
-@media only screen and (min-width : 1px) and (max-width : 349px) {
-  body {
-    min-width: 1px;
-    max-width: 349px;
-    -webkit-text-size-adjust: none;
-  }
-
-  .mobile_only {
-    display: inline !important;
-  }
-  .no_mobile {
-    display: none !important;
-  }
-
-  h1 {
-    margin-top: 0px;
-    width: 97%;
-    font-size: 32px;
-    line-height: 38px;
-  }
-  form input[type='password'] {
-    padding: 12px 8px;
-    width: 175px;
-    font-size: 22px;
-  }
-  form button {
-    width: 200px;
-    font-size: 22px;
-  }
-  .hmm h3 {
-    width: 90%;
-    font-size: 16px;
-  }
-  #hint_icon {
-    width: 20px;
-    height: 20px;
-    font-size: 12px;
-    line-height: 22px;
-    margin: -78px 0 0 105px;
-  }
-  #hint {
-    font-size: 14px;
-    margin-top: -12px;
-  }
-  #hint.show {
-    margin-bottom: 28px;
-  }
 }
