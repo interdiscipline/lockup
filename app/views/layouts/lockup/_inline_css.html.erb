@@ -1,7 +1,8 @@
 body {
-  color: #fff;
-  background-color: #252525;
+  color: #1A202C;
+  background-color: #F7FAFC;
   overflow: hidden;
+  margin: 0;
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
@@ -10,8 +11,15 @@ body {
   justify-content: center;
 }
 
+p {
+  margin: 0;
+}
+
 .container {
   margin: 0 1rem;
+}
+
+.text-center {
   text-align: center;
 }
 
@@ -68,7 +76,6 @@ form input[type='password'].nope {
 }
 
 .button:hover,
-
 .button:focus {
   background-color: #26ec67;
 }
@@ -81,15 +88,15 @@ form p {
   margin-bottom: 32px
 }
 
-.hmm h3 {
+.alert {
   display: block;
-  margin: 0 auto;
-  padding: 6px;
-  width: 400px;
-  color: #d01a45;
-  text-align: center;
-  background-color: #4a1f23;
+  padding: 0.875rem 1rem;
+  background-color: #FFF5F5;
+  border: 1px solid #FC8181;
+  border-radius: 4px;
+  color: #C53030;
 }
+
 #hint_icon {
   width: 24px;
   height: 24px;
