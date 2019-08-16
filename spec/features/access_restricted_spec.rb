@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'Accessing a page in the application' do
   def enter_code_word(code_word)
-    fill_in 'code word', with: code_word
+    fill_in 'Code word', with: code_word
     click_on 'Go'
   end
 
@@ -50,8 +50,6 @@ describe 'Accessing a page in the application' do
       visit '/posts'
 
       enter_code_word('lolwut')
-
-      page.should have_content('Hmm… that doesn’t seem right. Try again?')
 
       current_path.should_not == '/posts'
 
@@ -104,7 +102,9 @@ describe 'Accessing a page in the application' do
 
         visit '/posts'
 
-        within('#hint') { page.should have_content('Cute 4-legged animals') }
+        within('.hint') do
+          page.should have_xpath("//small[@title='Cute 4-legged animals']")
+        end
 
         ENV.delete('LOCKUP_HINT')
       end
