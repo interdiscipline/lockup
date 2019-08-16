@@ -1,28 +1,30 @@
-<h1>Please enter the code word to continue…</h1>
+<div class="container">
+  <h1>Please enter the code word to continue…</h1>
 
-<% if @wrong %>
-  <div class="hmm">
-    <h3>Hmm… that doesn't seem right. Try again?</h3>
-  </div>
-<% end %>
-
-<%= form_for :lockup, url: { action: 'unlock' } do |form| %>
-  <% unless @wrong == true %>
-    <p><%= form.password_field "codeword", placeholder: "code word", autofocus: true %></p>
-  <% else %>
-    <p><%= form.password_field "codeword", value: @codeword, class: 'nope', autofocus: true %></p>
+  <% if @wrong %>
+    <div class="hmm">
+      <h3>Hmm… that doesn't seem right. Try again?</h3>
+    </div>
   <% end %>
 
-  <% if lockup_hint %>
-    <p id='hint_icon'>?</p>
-    <p id='hint'><%= lockup_hint %></p>
-  <% end %>
+  <%= form_for :lockup, url: { action: 'unlock' } do |form| %>
+    <% unless @wrong == true %>
+      <p><%= form.password_field "codeword", placeholder: "code word", autofocus: true %></p>
+    <% else %>
+      <p><%= form.password_field "codeword", value: @codeword, class: 'nope', autofocus: true %></p>
+    <% end %>
 
-  <% if params[:return_to].present? %>
-    <%= form.hidden_field "return_to", value: params[:return_to] %>
-  <% elsif @return_to.present? %>
-    <%= form.hidden_field "return_to", value: @return_to %>
-  <% end %>
+    <% if lockup_hint %>
+      <p id='hint_icon'>?</p>
+      <p id='hint'><%= lockup_hint %></p>
+    <% end %>
 
-  <p><%= button_tag "Go" %></p>
-<% end %>
+    <% if params[:return_to].present? %>
+      <%= form.hidden_field "return_to", value: params[:return_to] %>
+    <% elsif @return_to.present? %>
+      <%= form.hidden_field "return_to", value: @return_to %>
+    <% end %>
+
+    <p><%= button_tag "Go" %></p>
+  <% end %>
+</div>

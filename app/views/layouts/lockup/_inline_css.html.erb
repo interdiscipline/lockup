@@ -2,7 +2,16 @@ body {
   color: #fff;
   background-color: #252525;
   overflow: hidden;
-  font-family: Helvetica, sans-serif;
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .container {
+    align-self: center;
+  }
 }
 
 form input[type='password'] {
