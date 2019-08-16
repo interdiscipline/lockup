@@ -1,5 +1,3 @@
-/* Content */
-
 body {
   color: #1a202c;
   background-color: #f7fafc;
@@ -88,34 +86,9 @@ form input[type="password"].nope {
   color: #c53030;
 }
 
-#hint_icon {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 50%;
-  text-align: center;
-  cursor: pointer;
-  color: #252525;
-  font-size: 16px;
-  line-height: 26px;
-  margin: -91px 0 0 135px;
-  border-radius: 15px;
-  background: #fff;
-}
-#hint {
-  font-size: 16px;
-  text-align: center;
-  overflow: hidden;
-  line-height: 0px;
-  margin-top: -16px;
-  transition: all 150ms ease-in-out;
-}
-
-#hint.show {
-  line-height: 18px;
-  margin-bottom: 23px;
-}
-
-#hint:before {
-  content: "Hint: ";
+.hint {
+  display: block;
+  cursor: help;
+  color: #718096;
+  margin-top: .5rem;
 }

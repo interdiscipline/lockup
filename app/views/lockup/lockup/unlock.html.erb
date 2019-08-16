@@ -10,23 +10,22 @@
   <% end %>
 
   <%= form_for :lockup, url: { action: 'unlock' } do |form| %>
-    <% unless @wrong == true %>
-      <%= form.password_field :codeword, placeholder: "Code word", autofocus: true, style: 'margin-bottom: 1rem' %>
-    <% else %>
-      <%= form.password_field :codeword, value: @codeword, class: 'nope', autofocus: true, style: 'margin-bottom: 1rem' %>
-    <% end %>
-
-    <% if lockup_hint %>
-      <p id='hint_icon'>?</p>
-      <p id='hint'><%= lockup_hint %></p>
-    <% end %>
-
     <% if params[:return_to].present? %>
       <%= form.hidden_field "return_to", value: params[:return_to] %>
     <% elsif @return_to.present? %>
       <%= form.hidden_field "return_to", value: @return_to %>
     <% end %>
 
-    <p><%= button_tag "Go", class: 'button' %></p>
+    <% unless @wrong == true %>
+      <%= form.password_field :codeword, placeholder: "Code word", autofocus: true %>
+    <% else %>
+      <%= form.password_field :codeword, value: @codeword, class: 'nope', autofocus: true %>
+    <% end %>
+
+    <% if lockup_hint %>
+      <small title="<%= lockup_hint %>" class="hint">Hint</small>
+    <% end %>
+
+    <%= button_tag 'Go', class: 'button', style: 'margin-top: .75rem;' %>
   <% end %>
 </div>
