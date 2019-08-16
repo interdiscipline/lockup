@@ -12,6 +12,7 @@ body {
 
 .container {
   margin: 0 1rem;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -44,26 +45,36 @@ form input[type='password'].nope {
   border-color: #d01a45;
   background-color: #6c3137;
 }
-form button {
-  display: block;
-  margin: 0 auto;
-  padding: 6px 16px 6px 16px;
-  width: 232px;
-  color: #fff;
-  font-size: 30px;
-  text-align: center;
+
+.button {
   background-color: #1ad056;
-  border: 0;
+  color: #fff;
   cursor: pointer;
+  display: inline-block;
+  padding: 0.875rem 1rem;
+
+  border-color: #1ad056;
+  border-radius: .25rem;
+  border-width: 1px;
+
+  font-size: .875rem;
+  font-weight: 600;
+  text-align: center;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+
   outline: none;
-  border-radius: 0;
-  transition: all 150ms ease-in-out;
+  transition: all .3s;
 }
-form button:hover,
-form button:focus {
+
+.button:hover,
+
+.button:focus {
   background-color: #26ec67;
 }
-form button:active {
+
+.button:active {
   background-color: #266cec;
   transition: all 0 ease-in-out;
 }
