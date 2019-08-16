@@ -17,9 +17,9 @@
     <% end %>
 
     <% unless @wrong == true %>
-      <%= form.password_field :codeword, placeholder: "Code word", autofocus: true %>
+      <%= form.password_field :codeword, placeholder: "Code word", autofocus: true, required: true %>
     <% else %>
-      <%= form.password_field :codeword, value: @codeword, class: 'nope', autofocus: true %>
+      <%= form.password_field :codeword, value: @codeword, class: 'nope', autofocus: true, required: true %>
     <% end %>
 
     <% if lockup_hint %>
