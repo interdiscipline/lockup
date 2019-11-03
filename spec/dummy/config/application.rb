@@ -1,13 +1,13 @@
-require File.expand_path('../boot', __FILE__)
+require File.expand_path('boot', __dir__)
 
 # Pick the frameworks you want:
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "sprockets/railtie"
+require 'action_controller/railtie'
+require 'action_mailer/railtie'
+require 'sprockets/railtie'
 require 'active_model'
 
 Bundler.require(*Rails.groups)
-require "lockup"
+require 'lockup'
 
 module Dummy
   class Application < Rails::Application
@@ -24,4 +24,3 @@ module Dummy
     # config.i18n.default_locale = :de
   end
 end
-

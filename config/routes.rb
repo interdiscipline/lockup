@@ -1,4 +1,4 @@
 Lockup::Engine.routes.draw do
-  get   'unlock' => 'lockup#unlock', as: 'unlock'
-  post  'unlock' => 'lockup#unlock'
+  get 'unlock', to: 'lockup#unlock', as: 'unlock'
+  post 'unlock', to: 'lockup#unlock'
 end

@@ -12,7 +12,7 @@
   <% else %>
     <p><%= form.password_field "codeword", value: @codeword, class: 'nope', autofocus: true %></p>
   <% end %>
-    
+
   <% if lockup_hint %>
     <p id='hint_icon'>?</p>
     <p id='hint'><%= lockup_hint %></p>
@@ -23,6 +23,6 @@
   <% elsif @return_to.present? %>
     <%= form.hidden_field "return_to", value: @return_to %>
   <% end %>
-    
+
   <p><%= button_tag "Go" %></p>
 <% end %>

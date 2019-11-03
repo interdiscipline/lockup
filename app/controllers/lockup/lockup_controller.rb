@@ -2,7 +2,7 @@ module Lockup
   class LockupController < Lockup::ApplicationController
     CRAWLER_REGEX = /crawl|googlebot|slurp|spider|bingbot|tracker|click|parser|spider/
 
-    if self.respond_to?(:skip_before_action)
+    if respond_to?(:skip_before_action)
       skip_before_action :check_for_lockup
     else
       skip_before_filter :check_for_lockup
@@ -48,11 +48,10 @@ module Lockup
 
     def run_redirect
       if @return_to.present?
-        redirect_to "#{@return_to}"
+        redirect_to @return_to.to_s
       else
         redirect_to '/'
       end
     end
-
   end
 end

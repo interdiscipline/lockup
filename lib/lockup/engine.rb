@@ -8,7 +8,7 @@ module Lockup
       g.helper false
     end
 
-    initializer 'lockup.app_controller' do |app|
+    initializer 'lockup.app_controller' do |_app|
       ActiveSupport.on_load(:action_controller) { include Lockup }
     end
   end
