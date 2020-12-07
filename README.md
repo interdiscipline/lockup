@@ -10,7 +10,7 @@ _“Can I come into your fort?”_
 
 _“…what’s the codeword?”_
 
-(currently used in production with Rails 3.X, Rails 4.X, and Rails 5.X)
+(currently used in production with Rails 3.X, Rails 4.X, Rails 5.X, and Rails 6.X)
 
 [Demos and more information.](http://lockupgem.com)
 
@@ -112,6 +112,6 @@ If you would like to change the content or design of the lockup page, you can cr
 
 Pull requests are quite welcome.
 
-## Project Site
+## Project Site (with Demo)
 
-[lockupgem.com](http://lockupgem.com)
+[lockupgem.com](https://lockupgem.com)
