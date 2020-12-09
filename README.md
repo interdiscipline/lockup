@@ -2,7 +2,7 @@
 
 # Lockup
 
-[![Gem Version](https://badge.fury.io/rb/lockup.svg)](http://badge.fury.io/rb/lockup) [![Build Status](https://travis-ci.org/gblakeman/lockup.svg?branch=master)](https://travis-ci.org/github/gblakeman/lockup)
+[![Gem Version](https://badge.fury.io/rb/lockup.svg)](http://badge.fury.io/rb/lockup) [![Build Status](https://travis-ci.com/gblakeman/lockup.svg?branch=master)](https://travis-ci.com/github/gblakeman/lockup)
 
 A simple gem to more elegantly place a staging server or other in-progress rails application behind a basic codeword. It’s easy to implement, share with clients/collaborators, and more beautiful than the typical password-protection sheet.
 
