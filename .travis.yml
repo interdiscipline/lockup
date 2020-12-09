@@ -1,0 +1,9 @@
+language: ruby
+cache: bundler
+before_install:
+  - yes | gem update --system --force
+  - gem install bundler --version 2.0.2
+install:
+  - bundle install
+script:
+  - bundle exec rspec
