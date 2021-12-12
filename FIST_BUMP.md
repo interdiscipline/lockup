@@ -1,10 +1,10 @@
-<img src="http://lockupgem.com/github_host/lockup_mark.png" width="65" height="87" alt="Lockup Shield" />
+<img src="http://lockup.interdiscipline.com/github_host/lockup_mark.png" width="65" height="87" alt="Lockup Shield" />
 
 # Lockup – FIST BUMP!
 
 A note of thanks from Grant ([@gblakeman](http://twitter.com/gblakeman)) and Jake ([@jkmcrg](http://twitter.com/jkmcrg))
 
-<img src="http://lockupgem.com/github_host/adventure_time_fist_bump.gif" width="450" height="253" alt="Fist Bump!" />
+<img src="http://lockup.interdiscipline.com/github_host/adventure_time_fist_bump.gif" width="450" height="253" alt="Fist Bump!" />
 
 * Thanks to Gabriel Cebrian (https://github.com/gabceb) for a more defensive cookie check.
 * Thanks to @afomera (https://github.com/afomera) for tweaks to support Rails 6 & Rails 6.1.
