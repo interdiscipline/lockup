@@ -1,4 +1,4 @@
-<img src="http://lockupgem.com/github_host/lockup_mark.png" width="100" height="134" alt="Lockup Shield" />
+<img src="http://lockup.interdiscipline.com/github_host/lockup_mark.png" width="100" height="134" alt="Lockup Shield" />
 
 # Lockup
 
@@ -12,7 +12,7 @@ _“…what’s the codeword?”_
 
 (currently used in production with Rails 3.X, Rails 4.X, Rails 5.X, and Rails 6.X)
 
-[Demos and more information.](http://lockupgem.com)
+[Demos and more information.](http://lockup.interdiscipline.com)
 
 ## Installation
 
@@ -114,4 +114,4 @@ Pull requests are quite welcome.
 
 ## Project Site (with Demo)
 
-[lockupgem.com](https://lockupgem.com)
+[lockup.interdiscipline.com](https://lockup.interdiscipline.com)
