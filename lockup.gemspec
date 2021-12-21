@@ -19,10 +19,10 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 
-  s.add_dependency "rails", ">= 3", "< 7.0"
+  s.add_dependency "rails", ">= 3", "< 7.1"
 
-  s.add_development_dependency 'rspec-rails', "~> 3.5"
-  s.add_development_dependency 'capybara', "~> 2.9"
-  s.add_development_dependency 'launchy', '~> 2.4' # To use Capybara's `save_and_open_page`
-  s.add_development_dependency 'byebug', '~> 9.0'
+  s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency 'capybara'
+  s.add_development_dependency 'launchy'
+  s.add_development_dependency 'byebug'
 end
