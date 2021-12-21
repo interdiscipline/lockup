@@ -9,9 +9,9 @@ require "lockup/version"
 Gem::Specification.new do |s|
   s.name        = "lockup"
   s.version     = Lockup::VERSION
-  s.authors     = ["gb Studio"]
-  s.email       = ["hello@grantblakeman.com"]
-  s.homepage    = "http://lockupgem.com"
+  s.authors     = ["Interdiscipline"]
+  s.email       = ["hello@interdiscipline.com"]
+  s.homepage    = "http://lockup.interdiscipline.com"
   s.summary     = "Lock staging servers from search engines and prying eyes."
   s.description = "A simple gem to more elegantly place a staging server or other in-progress application behind a basic codeword. It’s easy to implement, share with clients/collaborators, and more beautiful than the typical password-protection sheet."
   s.license     = "MIT"
