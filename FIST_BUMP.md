@@ -6,6 +6,7 @@ A note of thanks from Grant ([@gblakeman](http://github.com/gblakeman)) and Jake
 
 <img src="http://lockup.interdiscipline.com/github_host/adventure_time_fist_bump.gif" width="450" height="253" alt="Fist Bump!" />
 
+* Thanks to Georg Ledermann (https://github.com/ledermann) for tweaks to support Rails 7.
 * Thanks to Gabriel Cebrian (https://github.com/gabceb) for a more defensive cookie check.
 * Thanks to @afomera (https://github.com/afomera) for tweaks to support Rails 6 & Rails 6.1.
 * Thanks to @dankimio (https://github.com/dankimio) for README tweaks.
