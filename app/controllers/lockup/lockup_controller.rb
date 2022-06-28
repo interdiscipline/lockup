@@ -3,9 +3,9 @@ module Lockup
     CRAWLER_REGEX = /crawl|googlebot|slurp|spider|bingbot|tracker|click|parser|spider/
 
     if self.respond_to?(:skip_before_action)
-      skip_before_action :check_for_lockup
+      skip_before_action :check_for_lockup, raise: false
     else
-      skip_before_filter :check_for_lockup
+      skip_before_filter :check_for_lockup, raise: false
     end
 
     def unlock
