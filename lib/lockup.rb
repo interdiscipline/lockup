@@ -7,9 +7,9 @@ module Lockup
 
   included do
     if respond_to?(:before_action)
-      before_action :check_for_lockup, except: ['unlock']
+      before_action :check_for_lockup
     else
-      before_filter :check_for_lockup, except: ['unlock']
+      before_filter :check_for_lockup
     end
   end
 
