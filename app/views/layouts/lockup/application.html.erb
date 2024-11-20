@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width,initial-scale = 1.0,maximum-scale = 1.0,user-scalable=no" />
 
     <title>Please enter the code word to continue&hellip;</title>
-    <style>
+    <style nonce="<%= content_security_policy_nonce %>">
       <%= render partial: 'layouts/lockup/inline_css' %>
     </style>
-    <script>
+    <script nonce="<%= content_security_policy_nonce %>">
       <%= render partial: 'layouts/lockup/inline_js' %>
     </script>
   </head>
