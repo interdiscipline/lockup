@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'lockup/engine'
+require 'rails/health_controller_decorator'
 
 module Lockup
   extend ActiveSupport::Concern
